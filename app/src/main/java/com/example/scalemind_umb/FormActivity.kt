@@ -19,7 +19,15 @@ import androidx.compose.ui.tooling.preview.Preview
 class FormActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setContent {
+            FormScreen { name, email ->
+                val intent = Intent(this, ConfirmationActivity::class.java).apply {
+                    putExtra("NAME", name)
+                    putExtra("EMAIL", email)
+                }
+                startActivity(intent)
+            }
+        }
     }
 }
 

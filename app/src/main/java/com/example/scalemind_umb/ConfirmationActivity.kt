@@ -22,7 +22,7 @@ class ConfirmationActivity : ComponentActivity() {
 
         setContent {
             ConfirmationScreen(name, email) {
-                finish() // Cierra la actividad al presionar "Finalizar"
+                finishAffinity() // Cierra la actividad al presionar "Finalizar"
             }
         }
     }

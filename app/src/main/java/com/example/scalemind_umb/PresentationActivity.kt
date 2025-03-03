@@ -18,7 +18,8 @@ class PresentationActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             PresentationScreen {
-
+                val intent = Intent(this, FormActivity::class.java)
+                startActivity(intent)
             }
         }
     }
